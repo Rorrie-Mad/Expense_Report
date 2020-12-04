@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // getting data from local storage
+    let myItem = JSON.parse(localStorage.getItem('transactions'));
+    console.log(myItem);
+
   }
 
 }

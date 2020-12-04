@@ -6,11 +6,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { BalanceComponent } from './components/balance/balance.component';
+import { NewTransactionComponent } from './components/new-transaction/new-transaction.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { BalanceComponent } from './components/balance/balance.component';
     HomeComponent,
     TransactionComponent,
     BalanceComponent,
+    NewTransactionComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { BalanceComponent } from './components/balance/balance.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
