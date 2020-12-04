@@ -9,12 +9,6 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-    // getting data from local storage
-    let myItem = JSON.parse(localStorage.getItem('transactions'));
-    console.log(myItem);
-
-  }
+  ngOnInit(): void { }
 
 }

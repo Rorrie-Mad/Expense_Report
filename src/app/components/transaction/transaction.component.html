@@ -16,13 +16,13 @@
     <mdb-card class="mt-3" *ngFor="let trans of transactions"> 
         <mdb-card-body>
             <mdb-card-title class="d-flex flex-row">
-                <small class="pt-2">{{trans.date}}</small>
+                <small class="pt-2">20/11/1019 11:31</small>
                 <small class="pt-2 ml-auto">{{trans.type}}</small>
             </mdb-card-title>
             <mdb-card-text>
                 <div class="d-flex flex-row">
                     <div class="pt-2"> <strong>{{trans.description}}</strong> </div>
-                    <div class="pt-2 ml-auto"> <strong> {{trans.amount}} </strong> </div>
+                    <div class="pt-2 ml-auto"> <strong>R  {{trans.amount}}.00</strong> </div>
                 </div>
             </mdb-card-text>
         </mdb-card-body>

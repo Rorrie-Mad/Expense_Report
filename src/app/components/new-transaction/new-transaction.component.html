@@ -1,5 +1,4 @@
 <div>
-
     <!-- floating button -->
     <button type="button" mdbBtn color="dark" rounded="true" data-toggle="modal" size="sm" data-target="#basicExample"
         (click)="new_transaction.show()" mdbWavesEffect>Add New Transaction</button>
@@ -47,14 +46,10 @@
 
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button mdbBtn [disabled]="!transactionForm.valid" color="dark" (click)="add()" class="waves-light"
+                    <button mdbBtn [disabled]="!transactionForm.valid" color="dark" (click)="add(); new_transaction.hide()" class="waves-light"
                         mdbWavesEffect>Add</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
 </div>
