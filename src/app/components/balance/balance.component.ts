@@ -9,27 +9,22 @@ export class BalanceComponent implements OnInit {
 
   totalBalance: number = 0;
 
-  transactions: any[] = JSON.parse(localStorage.getItem('transactions'));
+  
   constructor() { }
 
   ngOnInit(): void {
+    // array getting data from local storage
+    let transactions: any[] = JSON.parse(localStorage.getItem('transactions'));
 
-    var type = JSON.parse(localStorage.getItem('transactions'))[1].type
-    var amount = JSON.parse(localStorage.getItem('transactions'))[1].amount
-    if (type == "expense") {
-      this.totalBalance = this.totalBalance - amount
-      console.log(this.totalBalance);
+
+    for (let i = 0; i < transactions.length; i++) {
+      if (transactions[i].type == "expense") {
+      this.totalBalance = this.totalBalance - transactions[i].amount
     }
     else {
-      this.totalBalance = this.totalBalance + amount
-      console.log(this.totalBalance);
+      this.totalBalance = this.totalBalance + transactions[i].amount
     }
-
-
-
-    // for (let i = 0; i < this.transactions.length; i++) {
-    //   console.log(transactions[i]);
-    // }
+    }
 
   }
 
