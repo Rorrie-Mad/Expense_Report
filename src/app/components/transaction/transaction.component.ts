@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { transition } from '@angular/animations';
-import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-transaction',
