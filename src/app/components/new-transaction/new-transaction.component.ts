@@ -14,6 +14,8 @@ export class NewTransactionComponent implements OnInit {
 
   transactions: any[] = [];
 
+  currentTime = new Date();
+
   constructor() {
   }
 
